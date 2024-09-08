@@ -1,0 +1,38 @@
+:root {
+    --black: #181818;
+    --white: #fff;
+    --blue-white: #f1f6f9;
+    --blue-gray: #c0cace;
+    --blue: #00B4D8;
+    --deep-sky-blue: #0077B6;
+    --dark-blue: #064486;
+    
+    --font-family-base-Regular: Arial, Helvetica, sans-serif;
+    --font-family-base-SemiBold: Gresco-SemiBold;
+    --font-family-base-Bold: Gresco-Bold;
+}
+
+@font-face {
+    font-family: 'Gresco-Regular';
+    src: url("./assets/fonts/Gresco/GrescoTrial-Regular.ttf")
+}
+
+@font-face {
+    font-family: 'Gresco-SemiBold';
+    src: url("./assets/fonts/Gresco/GrescoTrial-SemiBold.ttf")
+}
+
+@font-face {
+    font-family: 'Gresco-Bold';
+    src: url("./assets/fonts/Gresco/GrescoTrial-Bold.ttf")
+}
+
+*{
+    margin: 0;
+    padding: 0;  
+}
+
+a {
+    font-family: var(--font-family-base);
+    text-decoration: none;
+}

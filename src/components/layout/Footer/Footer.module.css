@@ -1,0 +1,27 @@
+.footer_container{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(10, 10, 20);
+}
+
+.icon_container{
+    display: flex;
+    width: 160px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 38px;
+}
+
+.info{
+    font-family: var(--font-family-base-Regular);
+    font-size: .9em;
+    color: var(--white);
+    margin-top: 12px;
+}
+
+.privacy{
+    color: #5b5b6d;
+}
