@@ -1,0 +1,25 @@
+.container{
+    height: 100vh;
+    width: 100%;
+}
+
+.top_container{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 250px;
+    width: 100%;
+    background-color: var(--blue-gray);
+}
+
+.perfilImage{
+    height: 200px;
+    width: 200px;
+    transform: translateY(100px);
+    border-radius: 150px;
+    background-color: var(--black);
+}
+
+@media screen and (max-width: 550px) {
+    
+}

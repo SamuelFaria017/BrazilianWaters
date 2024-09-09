@@ -1,4 +1,6 @@
 :root {
+    --auth-brand-update-black: 0, 0, 0;
+    
     --black: #181818;
     --white: #fff;
     --blue-white: #f1f6f9;
@@ -6,6 +8,7 @@
     --blue: #00B4D8;
     --deep-sky-blue: #0077B6;
     --dark-blue: #064486;
+    --auth-input-background: rgba(var(--auth-brand-update-black), .08);
     
     --font-family-base-Regular: Arial, Helvetica, sans-serif;
     --font-family-base-SemiBold: Gresco-SemiBold;

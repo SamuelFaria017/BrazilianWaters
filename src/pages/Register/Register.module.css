@@ -1,0 +1,103 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-blue);
+    border-radius: 50px;
+    width: 90px;
+    margin-top: 20px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.logo_image{
+    height: 120%;
+    width: 120%;
+}
+
+.main_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    width: 350px;
+    font-family: var(--font-family-base-Regular);
+}
+
+.title{
+    font-size: 2.2em;
+    margin-bottom: 25px;
+}
+
+.forms{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--auth-input-background);
+    box-sizing: border-box;
+    font-size: 1.05em;
+    padding: 1.5em;
+    border: none;
+    outline: none;
+}
+
+.field:hover{
+    outline: 1px solid var(--black);
+}
+
+.field:focus{
+    outline: 2px solid var(--black);
+    filter: none;
+}
+
+.message{
+    color: red;
+    
+}
+
+.button{
+    height: 50px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1.2em;
+    transition: border-radius 0.3s;
+    border: 0;
+}
+
+.button:hover{
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.newUser{
+    color: var(--deep-sky-blue);
+    text-decoration-line: underline;
+}

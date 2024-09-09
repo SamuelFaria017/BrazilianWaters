@@ -5,6 +5,9 @@ import { Plants } from '../pages/Plants/Plants'
 import { Animals } from '../pages/Animals/Animals'
 import { Login } from '../pages/Login/Login'
 import { Register } from '../pages/Register/Register'
+import { User } from '../pages/User/User'
+
+import { PrivateRoutes } from './PrivateRoutes'
 
 export function RoutesComponents(){
     return(
@@ -16,6 +19,10 @@ export function RoutesComponents(){
                 <Route path='animais' element={<Animals />} />      
                 <Route path='login' element={<Login />} />
                 <Route path='registrar' element={<Register />} />         
+                <Route path='usuario' element={<PrivateRoutes>
+                                                        <User />
+                                                </PrivateRoutes>
+                }/>
             </Routes>
         </Router>
     );
