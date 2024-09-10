@@ -13,3 +13,7 @@
 
 - [React](https://reactjs.org/): Biblioteca JavaScript para construção de interfaces de usuário.
 - [React Router](https://reactrouter.com/): Gerenciamento de navegação em páginas.
+- [Firebase](https://firebase.google.com/): O Firebase é uma plataforma de desenvolvimento de aplicativos móveis e da Web do Google que oferece uma série de recursos para a criação e melhoria de aplicações.
+- [Zod](https://firebase.google.com/): Biblioteca para validação e parsing de dados.
+- [@hookform/resolvers](https://firebase.google.com/): Resolvedores para integração do React Hook Form com bibliotecas de validação de dados como Zod.
+- [react-icons](https://firebase.google.com/): Biblioteca de ícones para React.
