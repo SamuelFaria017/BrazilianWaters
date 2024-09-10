@@ -39,9 +39,11 @@ export function Register() {
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password);
 
+            const userImageURL = await uploadImageFromURL('../../assets/imgs/User_icon.jpg', 'User_icon.jpg');
+
             await updateProfile(userCredential.user, {
                 displayName: data.username,
-                photoURL: uploadImageFromURL('../../assets/imgs/User_icon.jpg', 'User_icon.jpg')
+                photoURL: userImageURL
             });
 
             navigate('/');
