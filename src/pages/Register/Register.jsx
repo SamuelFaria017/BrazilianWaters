@@ -3,7 +3,6 @@ import { auth } from '../../firebase/firebaseConfiguration';
 import { uploadImageFromURL } from '../../firebase/basicFunctions';
 
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { } from 'firebase/storage';
 import { useNavigate, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -39,17 +38,26 @@ export function Register() {
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password);
 
-            const userImageURL = await uploadImageFromURL('../../assets/imgs/User_icon.jpg', 'User_icon.jpg');
-
             await updateProfile(userCredential.user, {
                 displayName: data.username,
-                photoURL: userImageURL
+                photoURL: 'gs://vidamarinhafirebase.appspot.com/images/photoURL/User_icon.jpg'
             });
 
             navigate('/');
 
         } catch (error) {
-            setMessageError('Conta já existente.');
+            switch (error.code) {
+                case 'auth/email-already-in-use':
+                    setMessageError('E-mail já utilizado.');
+                    break;
+                case 'auth/network-request-failed':
+                    setMessageError('Falha na conexão - Verifique sua internet.');
+                    break;
+
+                default:
+                    setMessageError(`Por favor, entre em contato com o suporte e informe esse código: ${error.code}`);
+                    break;
+            }
         }
     }
 
@@ -77,22 +85,22 @@ export function Register() {
                             className={styles.field}
                             placeholder='Nome'
                         />
-                        {errors.username && (
+                        {errors.username ? (
                             <p className={styles.message}>
                                 {errors.username.message}
                             </p>
-                        )}
+                        ) : null}
 
                         <input
                             {...register('email')}
                             className={styles.field}
                             placeholder='E-mail'
                         />
-                        {errors.email && (
+                        {errors.email ? (
                             <p className={styles.message}>
                                 {errors.email.message}
                             </p>
-                        )}
+                        ) : null}
 
                         <input
                             {...register('password')}
@@ -100,11 +108,11 @@ export function Register() {
                             placeholder='Senha'
                             type='password'
                         />
-                        {errors.password && (
+                        {errors.password ? (
                             <p className={styles.message}>
                                 {errors.password.message}
                             </p>
-                        )}
+                        ) : null}
 
                         <button
                             className={styles.button}
@@ -123,7 +131,3 @@ export function Register() {
         </div>
     );
 }
-
-
-
-//Vida Mar

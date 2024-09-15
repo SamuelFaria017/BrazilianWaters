@@ -31,10 +31,23 @@ export function Login() {
 
         try {
             await signInWithEmailAndPassword(auth, data.email, data.password);
-            navigate('Usuario');
+            navigate('usuario');
 
         } catch (error) {
-            setMessageError('E-Mail ou senha inválida ou conta inexistente.');
+            switch (error.code) {
+                case 'auth/user-not-found':
+                    setMessageError('Não há registro de usuário existente correspondente.');
+                    break;
+                case 'auth/invalid-credential':
+                    setMessageError('O e-mail ou senha fornecidos não está correto.');
+                    break;
+                case 'auth/network-request-failed':
+                    setMessageError('Falha na conexão - Verifique sua internet.');
+                    break;
+                default:
+                    setMessageError(`Por favor, entre em contato com o suporte e informe esse código: ${error.code}`);
+                    break;
+            }
         }
     }
 
@@ -62,11 +75,11 @@ export function Login() {
                             className={styles.field}
                             placeholder='E-mail'
                         />
-                        {errors.email && (
+                        {errors.email ? (
                             <p className={styles.message}>
                                 {errors.email.message}
                             </p>
-                        )}
+                        ) : null}
 
                         <input
                             {...register('password')}
@@ -74,11 +87,11 @@ export function Login() {
                             placeholder='Senha'
                             type='password'
                         />
-                        {errors.password && (
+                        {errors.password ? (
                             <p className={styles.message}>
                                 {errors.password.message}
                             </p>
-                        )}
+                        ) : null}
 
                         <button
                             className={styles.button}
