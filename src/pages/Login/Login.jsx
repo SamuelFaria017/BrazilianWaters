@@ -31,7 +31,7 @@ export function Login() {
 
         try {
             await signInWithEmailAndPassword(auth, data.email, data.password);
-            navigate('usuario');
+            navigate('/usuario');
 
         } catch (error) {
             switch (error.code) {

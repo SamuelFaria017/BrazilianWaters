@@ -11,7 +11,7 @@
     align-items: center;
     top: 0;
     left: 0;
-    background-color: var(--dark-blue);
+    background-color: var(--theme-color-dark);
     border-radius: 50px;
     width: 90px;
     margin-top: 20px;
@@ -39,7 +39,7 @@
     flex-direction: column;
     height: 400px;
     width: 350px;
-    font-family: var(--font-family-base-Regular);
+    font-family: var(--font-family-regular);
 }
 
 .title{
@@ -57,7 +57,7 @@
     height: 50px;
     width: 100%;
     margin-top: 20px;
-    background-color: var(--auth-input-background); 
+    background-color: var(--color-auth-brand-update-black); 
     box-sizing: border-box;
     font-size: 1.05em;
     padding: 1.5em;
@@ -66,16 +66,16 @@
 }
 
 .field:hover{
-    outline: 1px solid var(--black);
+    outline: 1px solid var(--color-dark);
 }
 
 .field:focus{
-    outline: 2px solid var(--black);
+    outline: 2px solid var(--color-dark);
     filter: none;
 }
 
 .message{
-    color: red;
+    color: var(--color-message-error);
     
 }
 
@@ -85,8 +85,8 @@
     margin-top: 40px;
     margin-bottom: 20px;
     border-radius: 8px;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--color-dark);
+    color: var(--text-color-light);
     font-size: 1.2em;
     transition: border-radius 0.3s;
     border: 0;
@@ -98,6 +98,6 @@
 }
 
 .newUser{
-    color: var(--deep-sky-blue);
+    color: var(--theme-color-semi-dark);
     text-decoration-line: underline;
 }

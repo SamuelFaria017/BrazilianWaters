@@ -1,23 +1,30 @@
 :root {
-    --auth-brand-update-black: 0, 0, 0;
-    
-    --black: #181818;
-    --white: #fff;
-    --blue-white: #f1f6f9;
-    --blue-gray: #c0cace;
-    --blue: #00B4D8;
-    --deep-sky-blue: #0077B6;
-    --dark-blue: #064486;
-    --auth-input-background: rgba(var(--auth-brand-update-black), .08);
-    
-    --font-family-base-Regular: Arial, Helvetica, sans-serif;
-    --font-family-base-SemiBold: Gresco-SemiBold;
-    --font-family-base-Bold: Gresco-Bold;
-}
+    /* Colors */
+    --color-dark: #181818;
+    --color-light: #ffffff;
+    --color-semi-dark: #c0cace;
+    --color-message-error: rgb(211, 19, 19);
+    --background-color-light: #e9ecee;
+    --background-color-dark: rgb(10, 10, 20);
+    --theme-color-light: #00b4d8;
+    --theme-color-semi-dark: #0077b6;
+    --theme-color-dark: #064486;
 
-@font-face {
-    font-family: 'Gresco-Regular';
-    src: url("./assets/fonts/Gresco/GrescoTrial-Regular.ttf")
+    /* Text Color */
+    --text-color-dark: #181818;
+    --text-color-middle: #5b5b6d;
+    --text-color-light: #fff;
+
+    /* Transparency */
+    --color-auth-brand-update-black: rgba(0, 0, 0, 0.08);
+    --background-film: rgba(0, 0, 0, 0.35);
+    --color-dark-shadow: rgba(108, 119, 129, 0.219);
+    --color-middle-shadow: rgba(0, 0, 0, 0.5);
+
+    /* Typography */
+    --font-family-regular: Arial, Helvetica, sans-serif;
+    --font-family-semibold: 'Gresco-SemiBold', Arial, Helvetica, sans-serif;
+    --font-family-bold: 'Gresco-Bold', Arial, Helvetica, sans-serif;
 }
 
 @font-face {

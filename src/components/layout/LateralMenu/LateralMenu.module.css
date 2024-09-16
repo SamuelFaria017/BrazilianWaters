@@ -6,7 +6,7 @@
     right: 0;
     bottom: 0;
     transition: width 0.3s;
-    background-color: var(--white);
+    background-color: var(--background-color-light);
 }
 
 .lateralMenu_container.open{
@@ -28,10 +28,10 @@
     width: 100px;
     margin-left: 30px;
     border-radius: 40px;
-    background-color: var(--black);
-    font-family: var(--font-family-base-Regular);
+    background-color: var(--color-dark);
+    font-family: var(--font-family-regular);
     font-size: 1.5em;
-    color: var(--white);
+    color: var(--text-color-light);
 }
 
 .nav_lateralMenu{
@@ -47,7 +47,7 @@
     justify-content: start;
     align-items: center;
     padding-left: 30px;
-    font-family: var(--font-family-base-Regular);
+    font-family: var(--font-family-regular);
     font-size: 2.5em;
-    color: var(--black);
+    color: var(--text-color-dark);
 }

@@ -1,17 +1,15 @@
+import { useState } from 'react';
+
 import { auth } from '../../firebase/firebaseConfiguration';
-
-import { uploadImageFromURL } from '../../firebase/basicFunctions';
-
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+
 import { useNavigate, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import Logo_VidaMarinha from '../../assets/imgs/Logo_VidaMarinha.png';
-
 import styles from './Register.module.css';
-import { useState } from 'react';
 
 const loginSchema = z.object({
     username: z.string()

@@ -1,19 +1,30 @@
-import styles from './User.module.css'
+import { useEffect, useState } from 'react';
+
+import { DownloadImageFromURL, isAuthenticated } from '../../firebase/basicFunctions';
 
 import { Header } from '../../components/layout/Header/Header';
 
-export function User(){
-    function getImageUser(){
+import styles from './User.module.css'
 
-    }
 
-    return(
+export function User() {
+    const [userImage, setUserImage] = useState();
+
+    useEffect(() => {
+        isAuthenticated()
+            .then((_user) => {
+                DownloadImageFromURL(_user.photoURL)
+                    .then((url) => setUserImage(url));
+            });
+    }, []);
+
+    return (
         <>
-            <Header/>
+            <Header />
             <div className={styles.container}>
                 <div className={styles.top_container}>
-                    <img 
-                        src={getImageUser()}
+                    <img
+                        src={userImage}
                         className={styles.perfilImage}
                     />
                 </div>

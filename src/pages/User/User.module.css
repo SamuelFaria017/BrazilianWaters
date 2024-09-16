@@ -9,7 +9,7 @@
     align-items: end;
     height: 250px;
     width: 100%;
-    background-color: var(--blue-gray);
+    background-color: var(--color-semi-dark);
 }
 
 .perfilImage{
@@ -17,7 +17,7 @@
     width: 200px;
     transform: translateY(100px);
     border-radius: 150px;
-    background-color: var(--black);
+    background-color: var(--color-dark);
 }
 
 @media screen and (max-width: 550px) {

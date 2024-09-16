@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
 
-import { auth } from '../../../firebase/firebaseConfiguration';
-import { onAuthStateChanged } from 'firebase/auth';
+import { isAuthenticated, DownloadImageFromURL } from '../../../firebase/basicFunctions';
 
 import { Link } from 'react-router-dom';
-import styles from './Header.module.css';
 
 import { LateralMenu } from '../LateralMenu/LateralMenu';
 
@@ -12,26 +10,22 @@ import User_icon from '../../../assets/imgs/User_icon.jpg';
 import Logo_VidaMarinha from '../../../assets/imgs/Logo_VidaMarinha.png';
 import Button_Menu from '../../../assets/imgs/Button_Menu.png';
 
+import styles from './Header.module.css';
+
 export function Header() {
     const [menuState, setMenuState] = useState(false);
-
     const [user, setUser] = useState(null);
-  
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-        if (user) {
-          setUser(user);
-        } else {
-          setUser(null);
-        }
-      });
-  
-      return () => unsubscribe();
-    }, []);
+    const [userImage, setUserImage] = useState(User_icon);
 
-    function imageRequest() { // Fazer uma requisição para o servidor onde está os dados do usuário, requisitando sua imagem.
-        return User_icon;
-    }
+    useEffect(() => {
+        isAuthenticated()
+            .then((_user) => {
+                setUser(_user);
+    
+                DownloadImageFromURL(_user.photoURL)
+                    .then((url) => setUserImage(url));            
+            });
+    }, []);
 
     function menuOpen() {
         setMenuState(!menuState);
@@ -62,12 +56,12 @@ export function Header() {
                 </nav>
 
                 <Link
-                    to={(user != null) ? "/usuario" : "/login"}
+                    to={(user) ? "/usuario" : "/login"}
                     className={`${styles.user} ${styles.nav_link}`}
                 >
                     <img
                         className={styles.user_image}
-                        src={imageRequest()}
+                        src={userImage}
                     />
                 </Link>
                 <div
@@ -81,7 +75,7 @@ export function Header() {
                 </div>
             </header>
 
-            {menuState && <div className={styles.overlay} onClick={menuOpen}></div>}
+            {menuState ? <div className={styles.overlay} onClick={menuOpen}></div> : null}
 
             <LateralMenu isOpen={menuState} />
         </>

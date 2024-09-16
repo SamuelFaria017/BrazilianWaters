@@ -4,7 +4,7 @@
     height: 300px;
     justify-content: center;
     align-items: center;
-    background-color: rgb(10, 10, 20);
+    background-color: var(--background-color-dark);
 }
 
 .icon_container{
@@ -16,12 +16,12 @@
 }
 
 .info{
-    font-family: var(--font-family-base-Regular);
+    font-family: var(--font-family-regular);
     font-size: .9em;
-    color: var(--white);
+    color: var(--text-color-light);
     margin-top: 12px;
 }
 
 .privacy{
-    color: #5b5b6d;
+    color: var(--text-color-middle);
 }
