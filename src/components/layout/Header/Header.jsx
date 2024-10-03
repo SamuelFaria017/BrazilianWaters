@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { isAuthenticated, DownloadImageFromURL } from '../../../firebase/basicFunctions';
+import { isAuthenticated, downloadImageFromURL } from '../../../firebase/basicFunctions';
 
 import { Link } from 'react-router-dom';
 
@@ -21,9 +21,12 @@ export function Header() {
         isAuthenticated()
             .then((_user) => {
                 setUser(_user);
-    
-                DownloadImageFromURL(_user.photoURL)
-                    .then((url) => setUserImage(url));            
+
+                downloadImageFromURL(_user.photoURL)
+                    .then((url) => setUserImage(url));
+            })
+            .catch((err) => {
+
             });
     }, []);
 

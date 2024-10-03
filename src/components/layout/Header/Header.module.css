@@ -77,8 +77,10 @@
 }
 
 .user_image{
+    height: 50px;
     width: 50px;
     border-radius: 25px;
+    object-fit: cover;
 }
 
 .button_menu_container{

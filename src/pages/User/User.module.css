@@ -1,4 +1,7 @@
 .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
     width: 100%;
 }
@@ -12,14 +15,89 @@
     background-color: var(--color-semi-dark);
 }
 
-.perfilImage{
+.perfilImage_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 200px;
     width: 200px;
     transform: translateY(100px);
     border-radius: 150px;
-    background-color: var(--color-dark);
+    overflow: hidden;
 }
 
-@media screen and (max-width: 550px) {
-    
+.perfilImage{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: var(--color-dark);
+    transition: filter 0.1s;
+}
+
+.perfilImage_container:hover .perfilImage{
+    filter: brightness(0.4);
+    cursor: pointer;
+}
+
+.perfilImage_container:hover .perfilImageDescription{
+    opacity: 1;
+}
+
+.perfilImageDescription{
+    cursor: pointer;
+    opacity: 0;
+    width: 140px;
+    position: absolute;
+    font-family: var(--font-family-regular);
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--text-color-light);
+}
+
+.user_name{
+    font-family: var(--font-family-regular);
+    font-size: 1.8em;
+    color: var(--text-color-dark);
+    margin-top: 140px;
+}
+
+.user_email{
+    font-family: var(--font-family-regular);
+    font-size: 1.4em;
+    color: var(--text-color-middle);
+    margin-top: 5px;
+}
+
+.buttons_container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+}
+
+.desconnectButton{
+    font-family: var(--font-family-regular);
+    font-size: 1.4em;
+    color: var(--text-color-middle);
+    margin-right: 40px;
+    padding: 5px;
+}
+
+.desconnectButton:hover{
+    cursor: pointer;
+}
+
+.deleteButton{
+    background-color: var(--color-message-error);
+    filter: saturate(0.65);
+    font-family: var(--font-family-regular);
+    font-size: 1.4em;
+    color: var(--text-color-light);
+    border: none;
+    padding: 5px;
+}
+
+.deleteButton:hover{
+    filter: saturate(1);
+    cursor: pointer;
 }

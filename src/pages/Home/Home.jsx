@@ -20,21 +20,21 @@ function ExampleCard({ title, image, description }) {
     );
 }
 
-export function Home(){
+export function Home() {
     const [search, setSearch] = useState('');
 
     const handleSubmit = () => {
         // Ações a serem realizadas na submissão do formulário.
     };
 
-    return(
+    return (
         <>
-            <Header/>
+            <Header />
 
             <BackgroundVideoComponent style={styles.background} source='../../../src/assets/videos/Background_home.mp4'>
                 <div className={styles.container}>
                     <div className={styles.search_container}>
-                        <h1 className={styles.title}>WATER LIVE</h1>
+                        <h1 className={styles.title}>BRAZILIAN WATERS</h1>
                         <h4 className={styles.description}>Os animais, corais, micro-organismos marinhos do Brasil.</h4>
                         <form
                             className={styles.search}
@@ -52,7 +52,7 @@ export function Home(){
                                 onClick={handleSubmit}
                                 className={styles.search_bnt}
                             >
-                                <IoSearchOutline size='40'/>
+                                <IoSearchOutline size='40' />
                             </button>
                         </form>
                     </div>
@@ -64,7 +64,7 @@ export function Home(){
                     <h1 className={styles.divisionTitle}>Mas então, o que é biologia marinha?</h1>
                     <span className={styles.divisionDescription}>A Biologia Marinha é uma área de estudo que abrange a vida nos oceanos,
                         mares, estuários e outras massas de água salgada. Os biólogos marinhos investigam e exploram a vida marinha,
-                        desde organismos microscópicos até grandes animais, como tubarões e baleias. 
+                        desde organismos microscópicos até grandes animais, como tubarões e baleias.
                     </span>
                 </div>
 
@@ -83,7 +83,7 @@ export function Home(){
                 />
             </div>
 
-            <Footer/>
+            <Footer />
         </>
     );
 }
