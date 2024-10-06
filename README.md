@@ -1,8 +1,8 @@
-# TccVidaMarinha
+# TCC - Brazilian Waters
 
 ## Descrição
 
-**TccVidaMarinha** é um site dedicado ao estudo e à divulgação da biologia marinha brasileira. Nosso objetivo é fornecer recursos educacionais, artigos científicos, e informações detalhadas sobre a rica biodiversidade marinha do Brasil. Utilizamos a biblioteca React para criar uma experiência de usuário interativa e dinâmica.
+**Brazilian Waters** é um site dedicado ao estudo e à divulgação da biologia marinha brasileira. Nosso objetivo é fornecer recursos educacionais, artigos científicos, e informações detalhadas sobre a rica biodiversidade marinha do Brasil. Utilizamos a biblioteca React para criar uma experiência de usuário interativa e dinâmica.
 
 ## Funcionalidades
 
