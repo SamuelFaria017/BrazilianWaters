@@ -1,0 +1,15 @@
+.outerDiv {
+    background-color: rgb(48, 98, 156);
+    padding: 30px;
+    border-radius: 0px 0px 20px 20px;
+    border:black ;
+}
+
+.innerDiv {
+    background-color: rgb(77, 98, 156);
+    padding: 30px;
+    width: 30em;
+    height: 30em;
+    border-radius: 10px;
+    font-family: var(--font-family-regular);
+}
