@@ -1,15 +1,17 @@
 .outerDiv {
-    background-color: rgb(48, 98, 156);
-    padding: 30px;
+    background-color: rgb(56, 145, 248);
+    margin-top: 5em;
+    padding: 20px;
     border-radius: 0px 0px 20px 20px;
     border:black ;
 }
 
 .innerDiv {
-    background-color: rgb(77, 98, 156);
-    padding: 30px;
-    width: 30em;
+    background-image: linear-gradient(to left,rgb(24, 109, 238), rgb(33, 136, 204));
+    padding: 50px;
+    width: 20em;
     height: 30em;
     border-radius: 10px;
+    border: 1px rgb(44, 44, 44) solid;
     font-family: var(--font-family-regular);
 }
