@@ -11,8 +11,10 @@ export function Plants(){
             <>
             <Header /> 
             <div className={styles.orgaCentral}>
+                <h2>Plantas Marinhas</h2>
                 {dados.map((item) => (
-                 <ModeloP key={item.id} imageSrc={item.imageSrc} text={item.text}/>))}
+                 <ModeloP key={item.id} imageSrc={item.imageSrc} text={item.text}/>
+                 ))}
             </div>
             <Footer />
             </>

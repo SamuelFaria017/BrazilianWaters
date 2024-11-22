@@ -2,3 +2,20 @@
     width: 99%;
     height: auto;
 }
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .introduction {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .plants {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
